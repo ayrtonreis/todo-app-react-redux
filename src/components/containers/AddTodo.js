@@ -13,7 +13,8 @@ const AddTodo = ({ dispatch }) => {
                     if (!input.value.trim()) {
                         return
                     }
-                    dispatch(addTodo(input.value));
+                    const currentTimestamp = (new Date).toLocaleString();
+                    dispatch(addTodo(input.value, currentTimestamp));
                     input.value = '';
                 }}
             >

@@ -9,6 +9,7 @@ function todos(state = [], action){
                 {
                     id: action.id,
                     text: action.text,
+                    timestamp: action.timestamp,
                     completed: false
                 }
             ];
@@ -25,9 +26,9 @@ function todos(state = [], action){
 function visibilityFilter(state = VisibilityFilters.SHOW_ALL, action){
     switch (action.type) {
         case 'SET_VISIBILITY_FILTER':
-            return action.filter
+            return action.filter;
         default:
-            return state
+            return state;
     }
 }
 
